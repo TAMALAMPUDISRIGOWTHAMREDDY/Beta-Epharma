@@ -30,14 +30,22 @@
     </nav>
     <div class="hello">
     <div class="result-box">
-    <h1>Medication Recommendation</h1>
-    
-    <p><strong class="Sym">Gender:</strong> {{ gender }}</p>
-    <p><strong class="Sym">Age:</strong> {{ age }}</p>
-    <p><strong class="Sym">Symptoms:</strong> {{ symptoms }}</p>
-    
-    <h1><strong>For you, we recommend:</strong> </h1>
-    <p><span class="highlight" id="medicine-name">{{ medicine }}</span></p>
+        <div class="res">
+            <h1>Medication Recommendation</h1>
+            
+            <p><strong class="Sym">Gender:</strong> {{ gender }}</p>
+            <p><strong class="Sym">Age:</strong> {{ age }}</p>
+            <p><strong class="Sym">Symptoms:</strong> {{ symptoms }}</p>
+            
+            <h1><strong>For you, we recommend:</strong> </h1>
+            <p><span class="highlight" id="medicine-name">{{ medicine }}</span></p>
+        </div>
+        <div class="res-img">
+            {% if medicine_image %}
+            <!---<p><strong>Recommended Medicine:</strong></p> -->
+            <img class="img-res" src="{{ medicine_image }}" alt="Medicine Image" width="300" onerror="this.style.display = 'none';">
+            {% endif %}
+        </div>
     </div>
     <div class="emergency" id="Guide">
         <h1 class="now">Buy Medicines Online</h1>
