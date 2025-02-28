@@ -13,7 +13,7 @@ model = joblib.load('model.pkl')
 db_config = {
     'host': 'localhost',
     'user': 'root',  # Change if needed
-    'password': 'Gowtham@2203'  # Set your MySQL password
+    'password': 'password'  # Set your MySQL password
 }
 
 def get_db_connection():
@@ -72,9 +72,9 @@ def login():
         else:
             return render_template('login.html', error="Invalid username or password")
     return render_template('login.html')
-
-@app.route('/signup', methods=['GET', 'POST'])
-def signup():
+#signup.html route
+@app.route('/signup_page', methods=['GET', 'POST'])
+def signup_page():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -95,7 +95,7 @@ def signup():
         cursor.close()
         conn.close()
 
-        return redirect(url_for('index'))
+        return redirect(url_for('main_page'))
 
     return render_template('signup.html')
 
@@ -103,9 +103,9 @@ def signup():
 def logout():
     session.pop('user', None)
     return redirect(url_for('login'))
-
-@app.route('/index', methods=['GET', 'POST'])
-def index():
+#index.html route
+@app.route('/main_page', methods=['GET', 'POST'])
+def main_page():
     """ Allow access to index even if the user is not logged in """
     if request.method == 'POST':
         try:
@@ -132,22 +132,25 @@ def index():
             return render_template('index.html', error="Please enter valid data for age.")
     
     return render_template('index.html', user=session.get('user'))
-
-@app.route("/cpr")
-def cpr():
+#Route for cpr as I am using url_for('guide1') insted of direct "cpr.html"
+@app.route("/guide1")
+def guide1():
     return render_template("first_aid/cpr.html")
 
-@app.route("/electric_shock")
-def electric_shock():
+#guide 2-snake_bite
+@app.route("/guide2")
+def guide2():
+    return render_template("first_aid/snake_bites.html")
+#guide3-fire_accidents
+@app.route("/guide3")
+def guide3():
+    return render_template("first_aid/fire_accidents.html")
+#guide4-electric_shocks
+@app.route("/guide4")
+def guide4():
     return render_template("first_aid/electric_shocks.html")
 
-@app.route("/fire_accidents")
-def fire_accidents():
-    return render_template("first_aid/fire_accidents.html")
 
-@app.route("/snake_bites")
-def snake_bites():
-    return render_template("first_aid/snake_bites.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
