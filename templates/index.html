@@ -16,25 +16,22 @@
 <body>
     <nav class="navigate">
         <ul>
-            <a href="{{ url_for('index') }}"><li>Home</li></a>
-            <!-- Dropdown for Emergency -->
+            <a href="{{ url_for('main_page') }}"><li>Home</li></a>
             <li class="dropdown">
                 <a href="#" class="dropbtn">Emergency</a>
                 <div class="dropdown-content">
-                    <a href="{{ url_for('cpr') }}">CPR</a>
-                    <a href="{{ url_for('electric_shock') }}">Electric Shock</a>
-                    <a href="{{ url_for('fire_accidents') }}">Fire Accident</a>
-                    <a href="{{ url_for('snake_bites') }}">Snake Bite</a>
+                    <a href="{{ url_for('guide1') }}">CPR</a>
+                    <a href="{{ url_for('guide2') }}">Snake Bite</a>
+                    <a href="{{ url_for('guide3') }}">Fire Accident</a>
+                    <a href="{{ url_for('guide4') }}">Electric Shock</a>
                 </div>
             </li>
-            <a href="{{ url_for('signup') }}"><li>Login</li></a>
+            <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
             <a href=""><li>About Us</li></a>
         </ul>
     </nav>
     <div class="hello">
     <h1 id="Heading">Welcome to ePharma</h1>
-
-    <!-- Add Logout Button -->
     <a href="{{ url_for('logout') }}">
         <button class="logout-btn">Logout</button>
     </a>
@@ -66,18 +63,18 @@
         <h1 class="now">Emergency Guides</h1>
         <p class="now">If you need further assistance, check out the following first aid guides:</p>
         <ul>
-            <li><a class="new" href="{{ url_for('cpr') }}"><img src="../static/images/Emergency logos/cpr.jpg" alt="CPR">
+            <li><a class="new" href="{{ url_for('guide1') }}"><img src="../static/images/Emergency logos/cpr.jpg" alt="CPR">
                     <figcaption>CPR</figcaption>
                 </a></li>
-            <li><a class="new" href="{{ url_for('snake_bites') }}"><img src="../static/images/Emergency logos/snake_bite.jpg"
+            <li><a class="new" href="{{ url_for('guide2') }}"><img src="../static/images/Emergency logos/snake_bite.jpg"
                         alt="Snake Bite">
                     <figcaption>Snake Bite</figcaption>
                 </a></li>
-            <li><a class="new" href="{{ url_for('fire_accidents') }}"><img
+            <li><a class="new" href="{{ url_for('guide3') }}"><img
                         src="../static/images/Emergency logos/fire_accident.jpg" alt="Fire Accident">
                     <figcaption>Fire Accident</figcaption>
                 </a></li>
-            <li><a class="new" href="{{ url_for('electric_shock') }}"><img
+            <li><a class="new" href="{{ url_for('guide4') }}"><img
                         src="../static/images/Emergency logos/electric_shock.jpg" alt="Electric Shock">
                     <figcaption>Electric Shock</figcaption>
                 </a></li>
