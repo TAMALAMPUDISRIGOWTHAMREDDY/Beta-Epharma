@@ -1,4 +1,5 @@
 symptom1,symptom2,symptom3,medicine
+Fever,null,null,Paracetamol
 Fever,Cough,Fatigue,Paracetamol
 Headache,Nausea,Dizziness,Ibuprofen
 Sore Throat,Runny Nose,Sneezing,Loratadine
@@ -28,3 +29,292 @@ Stomach Ulcer,Burning Pain,Nausea,Ranitidine
 Bronchitis,Persistent Cough,Mucus,Azithromycin
 Kidney Infection,Fever,Lower Back Pain,Nitrofurantoin
 Muscle Strain,Swelling,Limited Movement,Ibuprofen
+symptom1,symptom2,symptom3,medicine
+Fever,null,null,Paracetamol
+Cough,null,null,Dextromethorphan
+Headache,null,null,Aspirin
+Nausea,null,null,Ondansetron
+Dizziness,null,null,Meclizine
+Sore Throat,null,null,Chlorhexidine
+Runny Nose,null,null,Phenylephrine
+Chest Pain,null,null,Nitroglycerin
+Abdominal Pain,null,null,Hyoscine
+Rash,null,null,Hydrocortisone
+Joint Pain,null,null,Diclofenac
+Back Pain,null,null,Ibuprofen
+Fatigue,null,null,Vitamin B12
+Insomnia,null,null,Melatonin
+High Blood Pressure,null,null,Amlodipine
+Sinus Pain,null,null,Naproxen
+Ear Pain,null,null,Ibuprofen
+Red Eyes,null,null,Naphazoline
+Muscle Pain,null,null,Acetaminophen
+Allergic Reaction,null,null,Diphenhydramine
+Migraine,null,null,Ergotamine
+Menstrual Cramps,null,null,Ibuprofen
+Stomach Ulcer,null,null,Omeprazole
+Bronchitis,null,null,Codeine
+Kidney Infection,null,null,Cefalexin
+Muscle Strain,null,null,Naproxen
+Fever,Cough,null,Paracetamol
+Headache,Nausea,null,Ibuprofen
+Sore Throat,Runny Nose,null,Loratadine
+Chest Pain,Shortness of Breath,null,Aspirin
+Abdominal Pain,Diarrhea,null,Loperamide
+Rash,Itching,null,Cetirizine
+Joint Pain,Stiffness,null,Naproxen
+Back Pain,Muscle Spasms,null,Cyclobenzaprine
+Fatigue,Weakness,null,Ferrous Sulfate
+Cough,Wheezing,null,Albuterol
+Blurred Vision,Headache,null,Sumatriptan
+Constipation,Bloating,null,Docusate Sodium
+Heartburn,Indigestion,null,Omeprazole
+Insomnia,Anxiety,null,Diazepam
+High Blood Pressure,Dizziness,null,Lisinopril
+Sinus Pain,Congestion,null,Pseudoephedrine
+Urinary Pain,Frequent Urination,null,Ciprofloxacin
+Ear Pain,Hearing Loss,null,Amoxicillin
+Red Eyes,Itching,null,Tobramycin
+Muscle Pain,Weakness,null,Acetaminophen
+Skin Infection,Redness,null,Cephalexin
+Allergic Reaction,Sneezing,null,Fexofenadine
+Migraine,Light Sensitivity,null,Rizatriptan
+Menstrual Cramps,Lower Back Pain,null,Mefenamic Acid
+Stomach Ulcer,Burning Pain,null,Ranitidine
+Bronchitis,Persistent Cough,null,Azithromycin
+Kidney Infection,Fever,null,Nitrofurantoin
+Muscle Strain,Swelling,null,Ibuprofen
+Cold,null,null,Acetaminophen
+Hay Fever,null,null,Loratadine
+Dandruff,null,null,Ketoconazole
+Chronic Pain,null,null,Morphine
+Loss of Appetite,null,null,Metoclopramide
+High Cholesterol,null,null,Atorvastatin
+Nasal Congestion,null,null,Oxymetazoline
+Heart Palpitations,null,null,Metoprolol
+Hyperthyroidism,null,null,Methimazole
+Hypothyroidism,null,null,Levothyroxine
+Anemia,null,null,Iron Supplements
+Dry Skin,null,null,Moisturizing Cream
+Psoriasis,null,null,Calcipotriol
+Acne,null,null,Clindamycin
+Cold Sores,null,null,Acyclovir
+Gingivitis,null,null,Chlorhexidine Mouthwash
+Muscle Spasms,null,null,Baclofen
+Osteoarthritis,null,null,Glucosamine
+Tinnitus,null,null,Ginkgo Biloba
+Eye Dryness,null,null,Artificial Tears
+Laryngitis,null,null,Prednisolone
+Vertigo,null,null,Betahistine
+Sciatica,null,null,Pregabalin
+Hypoglycemia,null,null,Glucose Tablets
+Sunburn,null,null,Aloe Vera Gel
+Dental Pain,null,null,Benzocaine
+Gastroenteritis,null,null,Oral Rehydration Salts
+Cold,Headache,null,Ibuprofen
+Anemia,Fatigue,null,Iron Supplements
+High Cholesterol,Hypertension,null,Atorvastatin
+Dry Skin,Itching,null,Moisturizing Cream
+Osteoarthritis,Joint Pain,null,Glucosamine
+Sciatica,Back Pain,null,Pregabalin
+Tinnitus,Dizziness,null,Betahistine
+Hyperthyroidism,Weight Loss,null,Methimazole
+Hypothyroidism,Hair Loss,null,Levothyroxine
+Loss of Appetite,Nausea,null,Metoclopramide
+Fatigue,null,null,Vitamin D
+Drowsiness,null,null,Caffeine
+Cold Feet,null,null,Nifedipine
+Night Sweats,null,null,Clonidine
+Frequent Headaches,null,null,Naproxen
+Eye Irritation,null,null,Lubricating Eye Drops
+Swollen Glands,null,null,Ibuprofen
+Cold Hands,null,null,Amlodipine
+High Fever,null,null,Ibuprofen
+Dry Cough,null,null,Codeine
+Hair Loss,null,null,Minoxidil
+Panic Attacks,null,null,Sertraline
+Snoring,null,null,Nasal Strips
+Cold Sores,null,null,Famciclovir
+Motion Sickness,null,null,Scopolamine
+Hives,null,null,Loratadine
+Frequent Urination,null,null,Tolterodine
+Excessive Thirst,null,null,Desmopressin
+Shingles,null,null,Valacyclovir
+Ear Infection,null,null,Amoxicillin
+Restless Legs,null,null,Ropinirole
+Blood Clots,null,null,Warfarin
+Urinary Tract Infection,null,null,Nitrofurantoin
+Chapped Lips,null,null,Petroleum Jelly
+Chronic Fatigue,null,null,Modafinil
+Acid Reflux,null,null,Famotidine
+Lactose Intolerance,null,null,Lactase Supplements
+Dry Scalp,null,null,Salicylic Acid Shampoo
+Postnasal Drip,null,null,Nasal Spray
+Cold Fingers,null,null,Ginkgo Biloba
+Hypothermia,null,null,Warm IV Fluids
+Low Blood Pressure,null,null,Fludrocortisone
+Blurred Vision,null,null,Timolol
+Heavy Menstrual Bleeding,null,null,Tranexamic Acid
+Frequent Nightmares,null,null,Prazosin
+Tingling Hands,null,null,Vitamin B6
+Numbness in Feet,null,null,Alpha Lipoic Acid
+Low Testosterone,null,null,Testosterone Gel
+Bad Breath,null,null,Chlorhexidine Mouthwash
+Laryngitis,null,null,Voice Rest
+Gum Bleeding,null,null,Vitamin C
+Difficulty Swallowing,null,null,Sucralfate
+Excessive Sweating,null,null,Glycopyrrolate
+Hemorrhoids,null,null,Witch Hazel
+Fungal Nail Infection,null,null,Terbinafine
+Bruising Easily,null,null,Vitamin K
+Nosebleeds,null,null,Nasal Moisturizer
+Canker Sores,null,null,Triamcinolone
+Burning Feet,null,null,Capsaicin Cream
+Skin Tags,null,null,Tea Tree Oil
+Sun Sensitivity,null,null,Zinc Oxide Sunscreen
+Heat Rash,null,null,Calamine Lotion
+Tremors,null,null,Propranolol
+Swollen Feet,null,null,Furosemide
+Varicose Veins,null,null,Horse Chestnut Extract
+Whiplash,null,null,Muscle Relaxants
+Facial Swelling,null,null,Antihistamines
+Seizures,null,null,Levetiracetam
+Weight Gain,null,null,Metformin
+Short-Term Memory Loss,null,null,Ginkgo Biloba
+Nasal Polyps,null,null,Mometasone
+Puffy Eyes,null,null,Cold Compress
+Wound Infection,null,null,Mupirocin
+Itchy Scalp,null,null,Coal Tar Shampoo
+Brittle Nails,null,null,Vitamin B7
+Cold Sensitivity,null,null,Levothyroxine
+Food Poisoning,null,null,Oral Rehydration Salts
+Loss of Taste,null,null,Zinc Supplements
+Frequent Yawning,null,null,Modafinil
+Stiff Neck,null,null,Cyclobenzaprine
+Chest Tightness,null,null,Albuterol
+Kidney Stones,null,null,Tamsulosin
+Painful Swallowing,null,null,Lidocaine Spray
+Swollen Ankles,null,null,Compression Socks
+Sore Gums,null,null,Hydrogen Peroxide Rinse
+Tonsillitis,null,null,Penicillin
+Sweaty Palms,null,null,Aluminum Chloride Solution
+Skin Discoloration,null,null,Hydroquinone Cream
+Night Blindness,null,null,Vitamin A
+Throat Tightness,null,null,Epinephrine
+Frequent Nightmares,Anxiety,Insomnia,Prazosin
+Cold Hands,Numbness,Tingling,Nifedipine
+Osteoarthritis,Knee Pain,Joint Stiffness,Glucosamine
+Vertigo,Dizziness,Nausea,Betahistine
+Seizures,Confusion,Muscle Twitching,Levetiracetam
+Weight Gain,Increased Appetite,Fatigue,Metformin
+Nasal Polyps,Blocked Nose,Runny Nose,Mometasone
+Puffy Eyes,Dark Circles,Swelling,Cold Compress
+Wound Infection,Redness,Pus Formation,Mupirocin
+Sunburn,Redness,Pain,Aloe Vera Gel
+Heat Rash,Itching,Red Spots,Calamine Lotion
+Hemorrhoids,Itching,Bleeding,Witch Hazel
+Varicose Veins,Swelling,Leg Pain,Horse Chestnut Extract
+Whiplash,Neck Pain,Limited Mobility,Muscle Relaxants
+Facial Swelling,Redness,Pain,Antihistamines
+Gas,Bloating,Abdominal Discomfort,Simethicone
+Chronic Hiccups,Throat Spasms,Shortness of Breath,Baclofen
+Night Blindness,Dry Eyes,Blurred Vision,Vitamin A
+Tingling Hands,Numb Fingers,Pain,Vitamin B6
+Swollen Ankles,Fluid Retention,Shortness of Breath,Furosemide
+Frequent Yawning,Fatigue,Drowsiness,Modafinil
+Nosebleeds,Dry Nasal Passages,Headache,Nasal Moisturizer
+Bad Breath,Dry Mouth,Coated Tongue,Chlorhexidine Mouthwash
+Tonsillitis,Sore Throat,Fever,Penicillin
+Brittle Nails,Cracked Skin,Hair Loss,Vitamin B7
+Food Poisoning,Nausea,Diarrhea,Oral Rehydration Salts
+Painful Swallowing,Throat Irritation,Burning,Lidocaine Spray
+Sweaty Palms,Excessive Hand Moisture,Nervousness,Aluminum Chloride Solution
+Skin Discoloration,Pigmentation Issues,Dark Patches,Hydroquinone Cream
+Cracked Heels,Dry Skin,Calluses,Urea Cream
+Hard Stool,Straining,Abdominal Pain,Polyethylene Glycol
+Skin Tags,Flesh Growth,Itching,Tea Tree Oil
+Burning Feet,Numbness,Tingling,Capsaicin Cream
+Swollen Lips,Allergic Reaction,Tingling,Epinephrine
+Chronic Fatigue,Muscle Weakness,Dizziness,Modafinil
+Dry Eyes,Itchy Eyes,Redness,Artificial Tears
+Chest Congestion,Phlegm,Cough,Guaifenesin
+Difficulty Breathing,Nasal Congestion,Sinus Pressure,Oxymetazoline
+Frequent Heartburn,Acid Reflux,Bloating,Esomeprazole
+Cold Hands,Pale Skin,Numbness,Aspirin
+Severe Back Pain,Leg Numbness,Weakness,Methylprednisolone
+Hand Tremors,Difficulty Writing,Muscle Stiffness,Propranolol
+Depression,Loss of Appetite,Low Energy,Fluoxetine
+Muscle Spasms,Cramping,Nerve Pain,Baclofen
+Nasal Congestion,Facial Pain,Postnasal Drip,Fluticasone
+Frequent Sinus Infections,Headache,Nasal Pressure,Azithromycin
+Morning Stiffness,Joint Swelling,Persistent Pain,Methotrexate
+Frequent UTIs,Burning Urination,Pelvic Pain,Trimethoprim
+Chronic Diarrhea,Abdominal Cramping,Bloating,Loperamide
+Excessive Thirst,Frequent Urination,Blurred Vision,Glipizide
+Shaky Hands,Fast Heartbeat,Anxiety,Propranolol
+Cold Feet,Slow Healing Wounds,Tingling,Metformin
+Dry Mouth,Cracked Lips,Increased Thirst,Pilocarpine
+Hoarseness,Throat Pain,Difficulty Speaking,Dexamethasone
+Irregular Heartbeat,Chest Discomfort,Shortness of Breath,Amiodarone
+Chronic Headaches,Eye Strain,Fatigue,Naproxen
+Restless Sleep,Night Sweats,Anxiety,Lorazepam
+Weak Bones,Frequent Fractures,Back Pain,Alendronate
+Loss of Smell,Stuffy Nose,Sinus Pressure,Mometasone
+Throat Swelling,Face Rash,Shortness of Breath,Epinephrine
+Chronic Pelvic Pain,Heavy Periods,Bloating,Tranexamic Acid
+Ear Fullness,Dizziness,Balance Issues,Meclizine
+Swollen Eyelids,Red Eyes,Itchy Skin,Olopatadine
+Blood in Stool,Abdominal Cramps,Diarrhea,Mesalamine
+Frequent Bruising,Nosebleeds,Gum Bleeding,Vitamin K
+Lump in Breast,Nipple Discharge,Pain,Tamoxifen
+Sharp Chest Pain,Cough,Shortness of Breath,Clarithromycin
+Cold Sweats,Confusion,Dizziness,Glucose Tablets
+Sharp Stomach Pain,Bloating,Gas,Simethicone
+Painful Gums,Loose Teeth,Receding Gums,Chlorhexidine
+Frequent Leg Cramps,Nerve Pain,Muscle Weakness,Magnesium Citrate
+Low Iron Levels,Fatigue,Shortness of Breath,Ferrous Gluconate
+Heavy Sweating,Hot Flashes,Palpitations,Clonidine
+Stiff Neck,Swollen Lymph Nodes,Fever,Amoxicillin
+Blurred Vision,Frequent Urination,Tingling Hands,Metformin
+Persistent Hiccups,Abdominal Discomfort,Nausea,Chlorpromazine
+Chronic Snoring,Daytime Fatigue,Morning Headache,CPAP Therapy
+Sun Sensitivity,Red Patches,Skin Peeling,Zinc Oxide
+Numb Toes,Tingling Feet,Burning Sensation,Alpha Lipoic Acid
+Jaw Pain,Clicking Sound,Limited Jaw Movement,Ibuprofen
+Difficulty Swallowing,Food Sticking,Weight Loss,Sucralfate
+Unexplained Weight Loss,Night Sweats,Chronic Cough,Rifampin
+Chronic Cough,Breathing Issues,Phlegm,Tiotropium
+Painful Urination,Blood in Urine,Frequent Urination,Fosfomycin
+Sharp Rib Pain,Shallow Breathing,Sneezing Pain,Diclofenac
+Night Blindness,Blurry Vision,Eye Fatigue,Vitamin A
+Hair Thinning,Scalp Itching,Dandruff,Minoxidil
+Cold Sensitivity,Weight Gain,Constipation,Levothyroxine
+Difficult Labor,Pelvic Pain,Low Energy,Oxytocin
+Severe Acne,Facial Swelling,Oily Skin,Isotretinoin
+Skin Peeling,Redness,Burning Sensation,Hydrocortisone
+Swollen Ankles,Leg Cramps,Varicose Veins,Compression Socks
+Leg Weakness,Numbness,Spinal Pain,Gabapentin
+Shooting Leg Pain,Lower Back Pain,Tingling,Lidocaine Patch
+Weak Immune System,Frequent Infections,Persistent Fatigue,Echinacea
+Low Libido,Fatigue,Mood Swings,Testosterone Replacement
+Severe PMS,Mood Changes,Cramping,Chasteberry Extract
+Swollen Tonsils,Hoarseness,Chronic Sore Throat,Clarithromycin
+Recurring Fungal Infections,Itching,Peeling Skin,Clotrimazole
+Chronic Bloating,Burping,Acid Reflux,Rabeprazole
+Yellow Skin,Dark Urine,Fatigue,Cholestyramine
+Chronic Sinus Pressure,Postnasal Drip,Headache,Flunisolide
+Pale Skin,Frequent Headaches,Fatigue,Iron Supplements
+Persistent Nausea,Loss of Appetite,Weight Loss,Domperidone
+Recurring Chest Infections,Breathlessness,Cough,Theophylline
+Chronic Constipation,Hard Stool,Straining,Methylcellulose
+Recurring Yeast Infections,Vaginal Itching,Burning,Miconazole
+Frequent Panic Attacks,Racing Thoughts,Hyperventilation,Buspirone
+Chronic Shoulder Pain,Numb Fingers,Arm Weakness,Methylprednisolone
+Sharp Ear Pain,Hearing Loss,Ringing,Neomycin Drops
+Loud Snoring,Daytime Drowsiness,Breathing Pauses,Oral Appliance Therapy
+Hyperactivity,Restlessness,Lack of Focus,Atomoxetine
+Gout,Swollen Joints,Severe Toe Pain,Allopurinol
+Painful Knee Swelling,Limited Mobility,Joint Stiffness,Glucosamine
+Recurring Cold Sores,Tingling,Pain,Valacyclovir
+
+
