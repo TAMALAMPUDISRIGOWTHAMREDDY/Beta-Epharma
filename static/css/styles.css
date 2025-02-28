@@ -1,4 +1,3 @@
-
 /* Global Styles */
 * {
     box-sizing: border-box;
@@ -8,24 +7,27 @@
 
 body {
     font-family: Arial, sans-serif;
-
     text-align: center;
 }
-.hello{
+
+.hello {
     background-image: url("../images/background.jpg"); /* Updated Path */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    margin:-20px -12px 0px -12px;
+    margin: -20px -12px 0px -12px;
 }
+
 h1 {
     text-align: center;
     color: rgb(2, 2, 2);
     margin-top: 20px;
 }
-#Heading{
-    padding-top:15px;
+
+#Heading {
+    padding-top: 15px;
 }
+
 /* Form Styling */
 form {
     width: 400px;
@@ -65,42 +67,85 @@ button {
 button:hover {
     background: linear-gradient(to bottom right, #5ab9e4, #2c6dfb);
 }
-.navigate{
-    background:#2fa2a8;
-    height:90px;
+
+/* Navigation Bar */
+.navigate {
+    background: #2fa2a8;
+    height: 90px;
     margin: -7px -10px 0px -11px;
     display: flex;
     justify-content: right;
     border: 1px solid #247d84;
     border-radius: 1px;
 }
-.navigate ul{
+
+.navigate ul {
     display: flex;
     justify-content: right;
-    width:500px;
-    height:84px;
+    width: 500px;
+    height: 84px;
     box-sizing: border-box;
 }
-.navigate a{
-    margin:auto;
-    list-style: None;
+
+.navigate a {
+    margin: auto;
+    list-style: none;
     text-align: center;
-    padding:10px;
-    color:white;
+    padding: 10px;
+    color: white;
     text-decoration: none;
 }
-.navigate li{
+
+.navigate li {
     padding: 5px;
 }
-.navigate a:hover{
-    color:white;
+
+.navigate a:hover {
+    color: white;
 }
-.navigate li:hover{
+
+.navigate li:hover {
     border-bottom: 3.5px solid #677579;
     border-radius: 3px;
 }
+
+/* Dropdown for Emergency */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
 /* First Aid Section */
 .emergency {
+    margin-top: 90px; /* Align with the navigation bar */
     margin: 20px auto;
     padding: 20px;
     width: 80%;
@@ -131,9 +176,7 @@ button:hover {
     align-items: center;
 }
 
-/* First Aid Images with Updated Paths */
 .emergency img {
-    flex-wrap: wrap;
     width: 150px;
     height: 150px;
     border-radius: 10px;
@@ -143,6 +186,8 @@ button:hover {
 .emergency img:hover {
     transform: scale(1.1);
 }
+
+/* Additional Styling for Results */
 .result-box {
     background: rgba(255, 255, 255, 0.2); /* Slightly more opaque */
     border: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
@@ -152,17 +197,17 @@ button:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
     backdrop-filter: blur(10px); /* Smooth glass effect */
-    /* Proper text shadow */
 }
-
 
 .result-box h1 {
-    color:#222222;
+    color: #222222;
     font-size: 35px;
 }
-.Sym{
-    color:#4A4A4A;
+
+.Sym {
+    color: #4A4A4A;
 }
+
 .result-box p {
     color: #A17A5E;
     font-size: 28px;
@@ -221,6 +266,7 @@ a:hover {
     right: 20px; /* Distance from the right */
     z-index: 10; /* Ensure it's on top of other content */
 }
+
 .pharmacy-list {
     display: flex;
     justify-content: space-around;
@@ -248,27 +294,31 @@ a:hover {
     margin-bottom: 10px;
     object-fit: cover;
 }
+
 .pharmacy-item figcaption {
     font-size: 14px;
     margin-top: 5px;
     text-align: center;
     transition: transform 0.2s ease-in-out;
-
 }
+
 .pharmacy-item figcaption:hover {
     transform: scale(1.1);
 }
+
 .logout-btn:hover {
     background-color: #d32f2f; /* Darker red on hover */
 }
 
 @media only screen and (max-width: 1475px) {
     .emergency {
-        height:550px;
+        height: 550px;
     }
-    .pharmacy-item{
-        margin:0px;
+
+    .pharmacy-item {
+        margin: 0px;
     }
+
     .emergency img {
         width: 130px;
         height: 130px;
@@ -279,11 +329,13 @@ a:hover {
     .emergency {
         height: 1050px;
     }
+
     .emergency img {
         width: 130px;
         height: 130px;
     }
-    #Guide{
-        height:710px;
+
+    #Guide {
+        height: 710px;
     }
 }
