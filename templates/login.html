@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="../static/css/login_styles.css">
 </head>
 <body>
+    
     <div class="login-container">
         <h2>Get Started by using for Free</h2>
-        <button type="submit" href="index.html" id="Start">Get recommendation</button>
+        <a href="{{ url_for('index') }}">
+            <button type="button" id="Start">Get recommendation</button>
+        </a>
+        
+        
+        
         <h2>You can even Login</h2>
         
         {% if error %}
