@@ -8,19 +8,24 @@
 
 body {
     font-family: Arial, sans-serif;
+
+    text-align: center;
+}
+.hello{
     background-image: url("../images/background.jpg"); /* Updated Path */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    text-align: center;
+    margin:-20px -12px 0px -12px;
 }
-
 h1 {
     text-align: center;
     color: rgb(2, 2, 2);
     margin-top: 20px;
 }
-
+#Heading{
+    padding-top:15px;
+}
 /* Form Styling */
 form {
     width: 400px;
@@ -60,7 +65,40 @@ button {
 button:hover {
     background: linear-gradient(to bottom right, #5ab9e4, #2c6dfb);
 }
-
+.navigate{
+    background:#2fa2a8;
+    height:90px;
+    margin: -7px -10px 0px -11px;
+    display: flex;
+    justify-content: right;
+    border: 1px solid #247d84;
+    border-radius: 1px;
+}
+.navigate ul{
+    display: flex;
+    justify-content: right;
+    width:500px;
+    height:84px;
+    box-sizing: border-box;
+}
+.navigate a{
+    margin:auto;
+    list-style: None;
+    text-align: center;
+    padding:10px;
+    color:white;
+    text-decoration: none;
+}
+.navigate li{
+    padding: 5px;
+}
+.navigate a:hover{
+    color:white;
+}
+.navigate li:hover{
+    border-bottom: 3.5px solid #677579;
+    border-radius: 3px;
+}
 /* First Aid Section */
 .emergency {
     margin: 20px auto;
@@ -105,37 +143,6 @@ button:hover {
 .emergency img:hover {
     transform: scale(1.1);
 }
-
-/* First Aid Content */
-.first-aid {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.first-aid h1 {
-    color: #6624A0;
-    text-align: center;
-}
-
-.first-aid p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-}
-
-.first-aid ul {
-    text-align: left;
-    margin-top: 10px;
-}
-
-.first-aid ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
 .result-box {
     background: rgba(255, 255, 255, 0.2); /* Slightly more opaque */
     border: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
@@ -143,6 +150,7 @@ button:hover {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
     backdrop-filter: blur(10px); /* Smooth glass effect */
     /* Proper text shadow */
 }
