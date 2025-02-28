@@ -1,0 +1,281 @@
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 6px;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../images/background.jpg"); /* Updated Path */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(2, 2, 2);
+    margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #20bdc8, #1cb8c3, #1b8890);
+    border: 2px solid #247d84;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #247d84;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background: linear-gradient(to bottom right, #677579, #586468);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to bottom right, #5ab9e4, #2c6dfb);
+}
+
+/* First Aid Section */
+.emergency {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: rgba(167, 174, 176, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.emergency h1, .emergency p {
+    color: #333;
+}
+
+.emergency ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+    height: 300px;
+    gap: 10px;
+}
+
+.emergency li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* First Aid Images with Updated Paths */
+.emergency img {
+    flex-wrap: wrap;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.emergency img:hover {
+    transform: scale(1.1);
+}
+
+/* First Aid Content */
+.first-aid {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.first-aid h1 {
+    color: #6624A0;
+    text-align: center;
+}
+
+.first-aid p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.first-aid ul {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.first-aid ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.result-box {
+    background: rgba(255, 255, 255, 0.2); /* Slightly more opaque */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Smooth glass effect */
+    /* Proper text shadow */
+}
+
+
+.result-box h1 {
+    color:#222222;
+    font-size: 35px;
+}
+.Sym{
+    color:#4A4A4A;
+}
+.result-box p {
+    color: #A17A5E;
+    font-size: 28px;
+}
+
+.highlight {
+    color: #FFA500; /* Yellow to highlight medicine */
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.hover-scale {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.new {
+    text-decoration: none;
+    color: black;
+}
+
+.new figcaption {
+    transition: transform 0.2s ease-in-out;
+}
+
+.new figcaption:hover {
+    transform: scale(1.1);
+}
+
+#disclaimer {
+    color: rgba(255, 0, 0, 1.2);
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* Logout Button Styling */
+.logout-btn {
+    width: 120px; /* Smaller width */
+    padding: 8px; /* Smaller padding */
+    background-color: #f44336; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 10; /* Ensure it's on top of other content */
+}
+.pharmacy-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pharmacy-item {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.pharmacy-link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.pharmacy-link img {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+.pharmacy-item figcaption {
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+
+}
+.pharmacy-item figcaption:hover {
+    transform: scale(1.1);
+}
+.logout-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+@media only screen and (max-width: 1475px) {
+    .emergency {
+        height:550px;
+    }
+    .pharmacy-item{
+        margin:0px;
+    }
+    .emergency img {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .emergency {
+        height: 1050px;
+    }
+    .emergency img {
+        width: 130px;
+        height: 130px;
+    }
+    #Guide{
+        height:710px;
+    }
+}

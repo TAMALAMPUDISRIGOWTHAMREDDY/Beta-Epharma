@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ePharma - Medication Result</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/Faviicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/Faviicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/Faviicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../static/Faviicon/favicon_io/site.webmanifest">
+</head>
+<body>
+    <div class="result-box">
+    <h1>Medication Recommendation</h1>
+    
+    <p><strong class="Sym">Gender:</strong> {{ gender }}</p>
+    <p><strong class="Sym">Age:</strong> {{ age }}</p>
+    <p><strong class="Sym">Symptoms:</strong> {{ symptoms }}</p>
+    
+    <h1><strong>Based On Your symptoms, we recommend:</strong> </h1>
+    <p><span class="highlight" id="medicine-name">{{ medicine }}</span></p>
+    </div>
+    <div class="emergency" id="Guide">
+        <h1 class="now">Buy Medicines Online</h1>
+        <p class="now">Purchase medicines from these trusted online pharmacies:</p>
+        <ul class="pharmacy-list">
+            <li class="pharmacy-item">
+                <a class="pharmacy-link" href="https://www.apollopharmacy.in/search-medicines/{{ medicine | urlencode }}" target="_blank">
+                    <img src="../static/images/Medical Logos/apollo-pharmacy-logo.png" alt="Apollo Pharmacy">
+                    <figcaption>Apollo Pharmacy</figcaption>
+                </a>
+            </li>
+            <li class="pharmacy-item">
+                <a class="pharmacy-link" href="https://www.netmeds.com/catalogsearch/result/{{ medicine | urlencode }}/all" target="_blank">
+                    <img src="../static/images/Medical Logos/netmeds-logo.png" alt="Netmeds">
+                    <figcaption>Netmeds</figcaption>
+                </a>
+            </li>
+            <li class="pharmacy-item">
+                <a class="pharmacy-link" href="https://pharmeasy.in/search/all?name={{ medicine | urlencode }}" target="_blank">
+                    <img src="../static/images/Medical Logos/pharmeasy-logo.png" alt="PharmEasy">
+                    <figcaption>PharmEasy</figcaption>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <article>
+        <h6 id="disclaimer">Disclaimer: Please Consult a Doctor As Well</h6>
+    </article>
+    <br>
+    <a href="{{ url_for('index') }}">Back to Home<i class="fa fa-home"></i></a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+pip install scikit-learn
+1. Check Python Version in Terminal
+Run:
+
+sh
+Copy
+Edit
+python --version
+Make sure it's Python 3.11, the same version where MySQL is installed.
+
+2. Use the Correct Python Interpreter
+Run:
+
+sh
+Copy
+Edit
+python -m pip install mysql-connector-python
+Then try running your script again.
+
+3. Run in a Virtual Environment (Recommended)
+If you're using multiple Python versions, create a virtual environment and reinstall dependencies:
+
+sh
+Copy
+Edit
+python -m venv venv  
+source venv/bin/activate  # (For Linux/macOS)  
+venv\Scripts\activate  # (For Windows)  
+pip install mysql-connector-python  
