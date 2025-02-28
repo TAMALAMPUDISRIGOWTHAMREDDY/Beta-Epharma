@@ -46,6 +46,44 @@ def initialize_database():
 
 initialize_database()
 
+def get_wikimedia_image(medicine_name):
+    """
+    Fetch the most relevant medicine or molecular structure image from Wikimedia.
+    """
+    search_url = f"https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&titles=File:{medicine_name}.jpg|File:{medicine_name}.png&origin=*&iiprop=url"
+    
+    response = requests.get(search_url)
+    
+    if response.status_code == 200:
+        data = response.json()
+        pages = data.get("query", {}).get("pages", {})
+
+        for page in pages.values():
+            if "imageinfo" in page:
+                img_url = page["imageinfo"][0]["url"]
+                return img_url  # Return the first valid image found
+    
+    return None  # If no image found, return None
+
+def get_molecular_structure(medicine_name):
+    """
+    Fetch molecular structure image if no medicine image is found.
+    """
+    search_url = f"https://commons.wikimedia.org/w/api.php?action=query&format=json&list=search&srsearch={medicine_name} chemical structure&origin=*"
+    
+    response = requests.get(search_url)
+    
+    if response.status_code == 200:
+        data = response.json()
+        search_results = data.get("query", {}).get("search", [])
+        
+        if search_results:
+            first_result = search_results[0]["title"]
+            return f"https://commons.wikimedia.org/wiki/Special:FilePath/{first_result.replace(' ', '_')}"
+    
+    return None
+
+
 @app.route('/', methods=['GET'])
 def home():
     """ Redirect to login page by default """
@@ -103,6 +141,7 @@ def signup_page():
 def logout():
     session.pop('user', None)
     return redirect(url_for('login'))
+
 #index.html route
 @app.route('/main_page', methods=['GET', 'POST'])
 def main_page():
@@ -125,13 +164,21 @@ def main_page():
 
             symptom_string = ' '.join(symptom_list[:3])
             prediction = model.predict([symptom_string])
-            medicine = prediction[0]
+            medicine = prediction[0]  
 
-            return render_template('results.html', gender=gender, age=age, symptoms=symptoms, medicine=medicine)
+            # Try fetching a real medicine image
+            medicine_image = get_wikimedia_image(medicine.replace(" ", "_"))
+
+            # If no medicine image found, fallback to molecular structure
+            if not medicine_image:
+                medicine_image = get_molecular_structure(medicine.replace(" ", "_"))
+
+            return render_template('results.html', gender=gender, age=age, symptoms=symptoms, medicine=medicine, medicine_image=medicine_image)
         except ValueError:
             return render_template('index.html', error="Please enter valid data for age.")
-    
+
     return render_template('index.html', user=session.get('user'))
+
 #Route for cpr as I am using url_for('guide1') insted of direct "cpr.html"
 @app.route("/guide1")
 def guide1():
