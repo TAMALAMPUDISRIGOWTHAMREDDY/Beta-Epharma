@@ -106,7 +106,7 @@ def login():
 
         if user:
             session['user'] = username
-            return redirect(url_for('index'))  # Redirect to index after login
+            return redirect(url_for('main_page'))  # Redirect to index after login
         else:
             return render_template('login.html', error="Invalid username or password")
     return render_template('login.html')
