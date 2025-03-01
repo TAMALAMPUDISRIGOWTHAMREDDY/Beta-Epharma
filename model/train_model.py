@@ -12,11 +12,12 @@ data = pd.read_csv('model/data.csv')
 
 # Clean and preprocess data
 data = data.dropna(subset=['medicine'])
-
 # Combine symptoms into a single feature
 def combine_symptoms(row):
-    symptoms = [str(row['symptom1']), str(row['symptom2']), str(row['symptom3'])]
-    return ' '.join([sym for sym in symptoms if sym.lower() != 'nan'])
+    symptoms = [row.get('symptom1', 'null'), row.get('symptom2', 'null'), row.get('symptom3', 'null')]
+    symptoms = [sym.lower() if pd.notna(sym) else "null" for sym in symptoms]  # Ensure 'null' for missing values
+    return ' '.join(symptoms)
+
 
 data['combined_symptoms'] = data.apply(combine_symptoms, axis=1)
 
