@@ -50,7 +50,9 @@ body {
     border-bottom: 3.5px solid #677579;
     border-radius: 3px;
 }
-
+.logout-btn {
+    background-color: #f44336;
+}
 /* Dropdown for Emergency */
 .dropdown {
     position: relative;
