@@ -1,6 +1,7 @@
 import joblib
 import mysql.connector
-import requests
+import requests 
+import wikipediaapi
 from flask import Flask, request, render_template, redirect, url_for, session
 
 app = Flask(__name__)
@@ -13,7 +14,7 @@ model = joblib.load('model.pkl')
 db_config = {
     'host': 'localhost',
     'user': 'root',  # Change if needed
-    'password': 'Gowtham@2203'  # Set your MySQL password
+    'password': 'password'  # Set your MySQL password
 }
 
 def get_db_connection():
@@ -84,6 +85,26 @@ def get_molecular_structure(medicine_name):
     return None
 
 
+def get_medicine_symptoms(medicine_name):
+    """
+    Fetch symptoms related to a medicine from Wikipedia.
+    """
+    user_agent = "ePharmaBot/1.0 (contact: your-email@example.com)"  # Set your own user-agent
+    wiki_wiki = wikipediaapi.Wikipedia(language='en', user_agent=user_agent)
+    
+    page = wiki_wiki.page(medicine_name)
+
+    if page.exists():
+        summary = page.summary
+        sentences = summary.split(". ")  # Split into sentences
+        
+        if len(sentences) > 2:
+            return ". ".join(sentences[:2]) + "."  # Return first 2 sentences, ensuring completeness
+        else:
+            return summary  # If short, return as is
+
+    return "Did you enter correct Medicine? Because no symptoms found for this medicine."
+
 @app.route('/', methods=['GET'])
 def home():
     """ Redirect to login page by default """
@@ -110,6 +131,7 @@ def login():
         else:
             return render_template('login.html', error="Invalid username or password")
     return render_template('login.html')
+
 #signup.html route
 @app.route('/signup_page', methods=['GET', 'POST'])
 def signup_page():
@@ -154,14 +176,12 @@ def main_page():
 
             if not age or not symptoms:
                 return render_template('index.html', error="Please provide valid inputs.")
-
-            symptom_list = [sym.strip() for sym in symptoms.split() if sym.strip()]
+            symptom_list = [sym.strip() for sym in symptoms.split(",") if sym.strip()]
             if len(symptom_list) < 1 or len(symptom_list) > 3:
                 return render_template('index.html', error="Please enter 1 to 3 symptoms.")
-
+            symptom_string = ' '.join(symptom.lower() for symptom in symptom_list)
             while len(symptom_list) < 3:
-                symptom_list.append('')
-
+                symptom_list.append("null")
             symptom_string = ' '.join(symptom_list[:3])
             prediction = model.predict([symptom_string])
             medicine = prediction[0]  
@@ -178,6 +198,19 @@ def main_page():
             return render_template('index.html', error="Please enter valid data for age.")
 
     return render_template('index.html', user=session.get('user'))
+
+@app.route('/search_medicine', methods=['GET', 'POST'])
+def search_medicine():
+    symptoms = None
+    medicine_name = None
+
+    if request.method == 'POST':
+        medicine_name = request.form.get('medicine', '').strip()
+
+        if medicine_name:
+            symptoms = get_medicine_symptoms(medicine_name)
+
+    return render_template('index.html', medicine=medicine_name, symptoms=symptoms)
 
 #Route for cpr as I am using url_for('guide1') insted of direct "cpr.html"
 @app.route("/guide1")
