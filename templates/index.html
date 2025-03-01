@@ -37,6 +37,7 @@
     </a>
 
     <form method="POST" onsubmit="debugForm()">
+        <h2 class="separate">Find Your medicine</h2>
         <label for="sex">
             <p>Gender:</p>
             <select class="inp" name="Gender" id="sex" required>
@@ -58,7 +59,21 @@
 
         <button class="sub" type="submit">Find Medicine</button>
     </form>
-
+    <div class="search-container">
+        <h2>Search for a Medicine</h2>
+        <form action="{{ url_for('search_medicine') }}" method="POST">
+            <input type="text" name="medicine" placeholder="Enter medicine name..." required>
+            <button type="submit">Search</button>
+            {% if medicine %}
+            {% if symptoms %}
+                <p><strong>Symptoms or Indications:</strong></p>
+                <p>{{ symptoms }}</p>
+            {% else %}
+                <p>No information found for this medicine or did you enter wrong spelling.</p>
+            {% endif %}
+            {% endif %}
+        </form>
+    </div>
     <div class="emergency">
         <h1 class="now">Emergency Guides</h1>
         <p class="now">If you need further assistance, check out the following first aid guides:</p>
