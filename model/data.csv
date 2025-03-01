@@ -29,7 +29,6 @@ Stomach Ulcer,Burning Pain,Nausea,Ranitidine
 Bronchitis,Persistent Cough,Mucus,Azithromycin
 Kidney Infection,Fever,Lower Back Pain,Nitrofurantoin
 Muscle Strain,Swelling,Limited Movement,Ibuprofen
-symptom1,symptom2,symptom3,medicine
 Fever,null,null,Paracetamol
 Cough,null,null,Dextromethorphan
 Headache,null,null,Aspirin
@@ -316,5 +315,3 @@ Hyperactivity,Restlessness,Lack of Focus,Atomoxetine
 Gout,Swollen Joints,Severe Toe Pain,Allopurinol
 Painful Knee Swelling,Limited Mobility,Joint Stiffness,Glucosamine
 Recurring Cold Sores,Tingling,Pain,Valacyclovir
-
-
