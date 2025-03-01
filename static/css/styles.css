@@ -276,20 +276,8 @@ a:hover {
     color: blue;
 }
 
-/* Logout Button Styling */
 .logout-btn {
-    width: 120px; /* Smaller width */
-    padding: 8px; /* Smaller padding */
-    background-color: #f44336; /* Red background */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px; /* Smaller font size */
-    cursor: pointer;
-    position: absolute;
-    top: 20px; /* Distance from the top */
-    right: 20px; /* Distance from the right */
-    z-index: 10; /* Ensure it's on top of other content */
+    background-color: #f44336;
 }
 
 .pharmacy-list {
