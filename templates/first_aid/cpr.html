@@ -22,7 +22,11 @@
                     <a href="{{ url_for('guide4') }}">Electric Shock</a>
                 </div>
             </li>
-            <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
+            {% if session.get('user') %}
+                <a href="{{ url_for('logout') }}" class="logout-btn"><li>Logout</li></a>
+            {% else %}
+                <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
+            {% endif %}
             <a href=""><li>About Us</li></a>
         </ul>
     </nav>
