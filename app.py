@@ -154,14 +154,12 @@ def main_page():
 
             if not age or not symptoms:
                 return render_template('index.html', error="Please provide valid inputs.")
-
-            symptom_list = [sym.strip() for sym in symptoms.split() if sym.strip()]
+            symptom_list = [sym.strip() for sym in symptoms.split(",") if sym.strip()]
             if len(symptom_list) < 1 or len(symptom_list) > 3:
                 return render_template('index.html', error="Please enter 1 to 3 symptoms.")
-
+            symptom_string = ' '.join(symptom.lower() for symptom in symptom_list)
             while len(symptom_list) < 3:
-                symptom_list.append('')
-
+                symptom_list.append("null")
             symptom_string = ' '.join(symptom_list[:3])
             prediction = model.predict([symptom_string])
             medicine = prediction[0]  
