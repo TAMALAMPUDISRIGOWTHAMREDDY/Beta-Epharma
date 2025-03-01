@@ -141,7 +141,10 @@ button:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
+.separate{
+    text-align: center;
+    color:black;
+}
 /* First Aid Section */
 .emergency {
     margin-top: 90px; /* Align with the navigation bar */
