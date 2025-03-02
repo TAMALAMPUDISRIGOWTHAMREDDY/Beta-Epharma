@@ -29,9 +29,24 @@
             {% else %}
                 <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
             {% endif %}
-            <a href=""><li>About Us</li></a>
+            <a href="#" onclick="openPopup()"><li>About Us</li></a>
         </ul>
     </nav>
+    <div id="about-us-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Meet the Team</h2>
+            <div class="part">
+            <ul>
+                <li class="highlight">T.Gowtham Reddy</li>
+                <li class="highlight">Shaik Zuheruddin</li>
+                <li class="fade-out">S.Kalyan Reddy</li>
+                <li class="fade-out">Mohammad Asif</li>
+                <li class="fade-out">K.D.V.Chakradhar</li>
+            </ul>
+            </div>
+        </div>
+    </div>
     <div class="hello">
     <div class="result-box">
         <div class="res">
@@ -76,10 +91,23 @@
         </ul>
     </div>
     <article>
+        <p style="display: none;">© 2025 Shaik Zuheruddin. All Rights Reserved.</p>
         <h6 id="disclaimer">Disclaimer: Please Consult a Doctor As Well</h6>
     </article>
     <br>
     <a href="{{ url_for('main_page') }}">Back to Home<i class="fa fa-home"></i></a>
     </div>
+    <script>
+        function openPopup() {
+            document.getElementById("about-us-popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("about-us-popup").style.display = "none";
+        }
+        console.log("%c © 2025 Shaik Zuheruddin. All Rights Reserved.", "color: #20dbca; font-size: 16px;");
+    </script>
+    <p style="font-size: 8px; color: rgba(255, 255, 255, 0.1); position: absolute; bottom: 5px; right: 10px;">
+        Szuher
+    </p> 
 </body>
 </html>
