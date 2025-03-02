@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <title>ePharma - Medication Result</title>
@@ -62,7 +62,7 @@
         <div class="res-img">
             {% if medicine_image %}
             <!---<p><strong>Recommended Medicine:</strong></p> -->
-            <img class="img-res" src="{{ medicine_image }}" alt="Medicine Image" width="300" onerror="this.style.display = 'none';">
+            <!--<img class="img-res" src="{{ medicine_image }}" alt="Medicine Image" width="300" onerror="this.style.display = 'none';">
             {% endif %}
         </div>
     </div>
@@ -109,5 +109,188 @@
     <p style="font-size: 8px; color: rgba(255, 255, 255, 0.1); position: absolute; bottom: 5px; right: 10px;">
         Szuher
     </p> 
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ePharma - Medication Result</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../static/js/script.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/Faviicon/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/Faviicon/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/Faviicon/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="../static/Faviicon/favicon_io/site.webmanifest">
+</head>
+<body>
+    <nav class="navigate">
+        <ul>
+            <a href="{{ url_for('main_page') }}"><li>Home</li></a>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Emergency</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('guide1') }}">CPR</a>
+                    <a href="{{ url_for('guide2') }}">Snake Bite</a>
+                    <a href="{{ url_for('guide3') }}">Fire Accident</a>
+                    <a href="{{ url_for('guide4') }}">Electric Shock</a>
+                </div>
+            </li>
+            {% if session.get('user') %}
+                <a href="{{ url_for('logout') }}" class="logout-btn"><li>Logout</li></a>
+            {% else %}
+                <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
+            {% endif %}
+            <a href="#" onclick="openPopup()"><li>About Us</li></a>
+        </ul>
+    </nav>
+    <div id="about-us-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Meet the Team</h2>
+            <div class="part">
+            <ul>
+                <li class="highlight">T.SriGowtham Reddy</li>
+                <li class="highlight">Shaik Zuheruddin</li>
+                <li class="highlight">K.Kalyan Reddy</li>
+                <li class="highlight">Mohammad Asif</li>
+                <li class="highlight">K.D.V.Chakradhar</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <div class="hello">
+    <div class="result-box">
+        <div class="res">
+            <h1>Medication Recommendation</h1>
+            
+            <p><strong class="Sym">Gender:</strong> {{ gender }}</p>
+            <p><strong class="Sym">Age:</strong> {{ age }}</p>
+            <p><strong class="Sym">Symptoms:</strong> {{ symptoms }}</p>
+            
+            <h1><strong>For you, we recommend:</strong> </h1>
+            <p><span class="highlight" id="medicine-name">{{ medicine }}</span></p>
+            
+            {% if not internet_available %}
+            <div class="internet-status">
+                <p><i class="fa fa-wifi" style="color: red;"></i> No internet connection detected. Medicine image and additional information unavailable.</p>
+            </div>
+            {% endif %}
+        </div>
+        <div class="res-img">
+            {% if medicine_image %}
+            <img class="img-res" src="{{ medicine_image }}" alt="Medicine Image" width="300" onerror="this.onerror=null; this.src='../static/images/no-image.png'; this.alt='Image not available';">
+            {% elif internet_available %}
+            <div class="no-image-msg">
+                <p><i class="fa fa-image"></i> No image available for this medicine.</p>
+            </div>
+            {% else %}
+            <div class="offline-img-placeholder">
+                <i class="fa fa-medkit" style="font-size: 100px; color: #20dbca;"></i>
+                <p>Image will be available when online</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="emergency" id="Guide">
+        <h1 class="now">Buy Medicines Online</h1>
+        <p class="now">Purchase medicines from these trusted online pharmacies:</p>
+        {% if not internet_available %}
+        <p class="offline-warning"><i class="fa fa-exclamation-triangle"></i> Internet connection required to access online pharmacies.</p>
+        {% endif %}
+        <ul class="pharmacy-list">
+            <li class="pharmacy-item">
+                <a class="pharmacy-link {% if not internet_available %}disabled-link{% endif %}" 
+                   href="{% if internet_available %}https://www.apollopharmacy.in/search-medicines/{{ medicine | urlencode }}{% else %}#{% endif %}" 
+                   {% if internet_available %}target="_blank"{% endif %}
+                   {% if not internet_available %}onclick="return false;"{% endif %}>
+                    <img src="../static/images/Medical Logos/apollo-pharmacy-logo.png" alt="Apollo Pharmacy">
+                    <figcaption>Apollo Pharmacy</figcaption>
+                </a>
+            </li>
+            <li class="pharmacy-item">
+                <a class="pharmacy-link {% if not internet_available %}disabled-link{% endif %}" 
+                   href="{% if internet_available %}https://www.netmeds.com/catalogsearch/result/{{ medicine | urlencode }}/all{% else %}#{% endif %}" 
+                   {% if internet_available %}target="_blank"{% endif %}
+                   {% if not internet_available %}onclick="return false;"{% endif %}>
+                    <img src="../static/images/Medical Logos/netmeds-logo.png" alt="Netmeds">
+                    <figcaption>Netmeds</figcaption>
+                </a>
+            </li>
+            <li class="pharmacy-item">
+                <a class="pharmacy-link {% if not internet_available %}disabled-link{% endif %}" 
+                   href="{% if internet_available %}https://pharmeasy.in/search/all?name={{ medicine | urlencode }}{% else %}#{% endif %}" 
+                   {% if internet_available %}target="_blank"{% endif %}
+                   {% if not internet_available %}onclick="return false;"{% endif %}>
+                    <img src="../static/images/Medical Logos/pharmeasy-logo.png" alt="PharmEasy">
+                    <figcaption>PharmEasy</figcaption>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <article>
+        <p style="display: none;">© 2025 Shaik Zuheruddin. All Rights Reserved.</p>
+        <h6 id="disclaimer">Disclaimer: Please Consult a Doctor As Well</h6>
+    </article>
+    <br>
+    <a href="{{ url_for('main_page') }}">Back to Home<i class="fa fa-home"></i></a>
+    </div>
+    <script>
+        function openPopup() {
+            document.getElementById("about-us-popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("about-us-popup").style.display = "none";
+        }
+        console.log("%c © 2025 Shaik Zuheruddin. All Rights Reserved.", "color: #20dbca; font-size: 16px;");
+    </script>
+    <p style="font-size: 8px; color: rgba(255, 255, 255, 0.1); position: absolute; bottom: 5px; right: 10px;">
+        Szuher
+    </p> 
+    
+    <!-- Add this style to handle disabled links and internet status -->
+    <style>
+        .internet-status {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 10px;
+            margin-top: 15px;
+            border-radius: 4px;
+        }
+        
+        .disabled-link {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        
+        .offline-warning {
+            color: #f44336;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .offline-img-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .no-image-msg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 300px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            color: #666;
+        }
+    </style>
 </body>
 </html>
