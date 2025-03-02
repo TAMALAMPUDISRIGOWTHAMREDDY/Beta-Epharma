@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="zuher" author="zuher">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electric Shock First Aid - ePharma</title>
     <link rel="stylesheet" href="../../static/css/emergency.css">
@@ -25,9 +26,24 @@
             {% else %}
                 <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
             {% endif %}
-            <a href=""><li>About Us</li></a>
+            <a href="#" onclick="openPopup()"><li>About Us</li></a>
         </ul>
     </nav>
+    <div id="about-us-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Meet the Team</h2>
+            <div class="part">
+            <ul>
+                <li class="highlight">T.Gowtham Reddy</li>
+                <li class="highlight">Shaik Zuheruddin</li>
+                <li class="fade-out">S.Kalyan Reddy</li>
+                <li class="fade-out">Mohammad Asif</li>
+                <li class="fade-out">K.D.V.Chakradhar</li>
+            </ul>
+            </div>
+        </div>
+    </div>
     <h1>First Aid for Electric Shocks</h1>
     <div class="matter">
         <h2>Electric Shock First Aid Video:</h2>
