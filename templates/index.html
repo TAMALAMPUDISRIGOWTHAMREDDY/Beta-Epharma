@@ -31,9 +31,24 @@
             {% else %}
                 <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
             {% endif %}
-            <a href=""><li>About Us</li></a>
+            <a href="#" onclick="openPopup()"><li>About Us</li></a>
         </ul>
     </nav>
+    <div id="about-us-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Meet the Team</h2>
+            <div class="part">
+            <ul>
+                <li class="highlight">T.Gowtham Reddy</li>
+                <li class="highlight">Shaik Zuheruddin</li>
+                <li class="fade-out">S.Kalyan Reddy</li>
+                <li class="fade-out">Mohammad Asif</li>
+                <li class="fade-out">K.D.V.Chakradhar</li>
+            </ul>
+            </div>
+        </div>
+    </div>
     <div class="hello">
     <h1 id="Heading">Welcome to ePharma</h1>
     <form method="POST" onsubmit="debugForm()">
@@ -56,7 +71,7 @@
             <p>Symptoms:</p>
             <input id="sea" type="text" name="symptoms" placeholder="Enter Symptoms separated by Commas" required>
         </label>
-
+        <p style="display: none;">© 2025 Shaik Zuheruddin. All Rights Reserved.</p>
         <button class="sub" type="submit">Find Medicine</button>
     </form>
     <div class="search-container">
@@ -105,8 +120,19 @@
             let ageValue = document.querySelector('input[name="age"]').value;
             console.log("Debug: Age Entered ->", ageValue);
         }
+        function openPopup() {
+            document.getElementById("about-us-popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("about-us-popup").style.display = "none";
+        }
+        console.log("%c © 2025 Shaik Zuheruddin. All Rights Reserved.", "color: #20dbca; font-size: 16px;");
+        
     </script>
     </div>
+    <p style="font-size: 8px; color: rgba(255, 255, 255, 0.1); position: absolute; bottom: 5px; right: 10px;">
+        © Szuher 2025
+    </p>
 </body>
 </html>
 
