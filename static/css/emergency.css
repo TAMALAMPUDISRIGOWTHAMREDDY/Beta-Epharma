@@ -89,6 +89,66 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.popup {
+    display: none;
+    position: fixed;
+    top: 29%;
+    right:-11%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom right, #20bdc8, #1cb8c3, #1b8890);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    color: white;
+    width: 350px;
+    text-align: center;
+    border:2px solid white;
+}
+.popup li{
+    list-style: none;
+    margin-left:-35px;
+}
+.popup-content {
+    background:white;
+    opacity:0.9;
+    padding: 20px;
+    border-radius: 10px;
+}
+.popup h2{
+    color:black;
+}
+.close {
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    font-size: 24px;
+    cursor: pointer;
+    color:white;
+    background-color: red;
+    border-radius:2px;
+    height:25px;
+    width:25px;
+}
+.part{
+    background-color: rgba(167, 174, 176, 0.8);
+    opacity:1;
+    border-radius: 10px;
+}
+.highlight {
+    color: black;
+    font-size: 18px;
+}
+.fade-out {
+    color:black;
+    opacity: 0.8;
+}
+body::after {
+    content: "© 2025 Shaik Zuheruddin";
+    position: fixed;
+    bottom: -9999px;
+    left: -9999px;
+    color: transparent;
+}
 h1{
     margin:3px -5px 20px -5px;
     text-align: center;
