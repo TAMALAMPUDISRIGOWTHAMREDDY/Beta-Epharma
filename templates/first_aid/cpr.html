@@ -27,9 +27,28 @@
             {% else %}
                 <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
             {% endif %}
-            <a href=""><li>About Us</li></a>
+            <a href="#" onclick="openPopup()"><li>About Us</li></a>
         </ul>
+        <span style="font-size: 7px; color: rgba(255, 255, 255, 0.07); position: absolute; bottom: 2px; right: 5px;">
+            Szuher
+        </span>
+        
     </nav>
+    <div id="about-us-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Meet the Team</h2>
+            <div class="part">
+            <ul>
+                <li class="highlight">T.Gowtham Reddy</li>
+                <li class="highlight">Shaik Zuheruddin</li>
+                <li class="fade-out">S.Kalyan Reddy</li>
+                <li class="fade-out">Mohammad Asif</li>
+                <li class="fade-out">K.D.V.Chakradhar</li>
+            </ul>
+            </div>
+        </div>
+    </div>
     <h1>CPR (Cardiopulmonary Resuscitation) Guide</h1>
     <div class="matter">
         <h2>CPR Demonstration Video:</h2>
@@ -70,8 +89,16 @@
 
         </ol>
     </div>
-    <br><br>
+    <br><p style="display: none;">© 2025 Shaik Zuheruddin. All Rights Reserved.</p><br>
     <a href="{{ url_for('main_page') }}">Back to Home<i class="fa fa-home"></i></a>
+    <script>
+        function openPopup() {
+            document.getElementById("about-us-popup").style.display = "block";
+        }
+        function closePopup() {
+            document.getElementById("about-us-popup").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
