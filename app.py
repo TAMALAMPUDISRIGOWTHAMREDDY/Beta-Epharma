@@ -84,7 +84,6 @@ def get_molecular_structure(medicine_name):
     
     return None
 
-
 def get_medicine_symptoms(medicine_name):
     """
     Fetch symptoms related to a medicine from Wikipedia.
