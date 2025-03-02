@@ -14,7 +14,7 @@ model = joblib.load('model.pkl')
 db_config = {
     'host': 'localhost',
     'user': 'root',  # Change if needed
-    'password': 'password'  # Set your MySQL password
+    'password': 'Gowtham@2203'  # Set your MySQL password
 }
 
 def get_db_connection():
@@ -227,7 +227,12 @@ def guide3():
 #guide4-electric_shocks
 @app.route("/guide4")
 def guide4():
-    return render_template("first_aid/electric_shocks.html")'''
+    return render_template("first_aid/electric_shocks.html")
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)'''
 
 import joblib
 import mysql.connector
@@ -542,11 +547,6 @@ def guide3():
 @app.route("/guide4")
 def guide4():
     return render_template("first_aid/electric_shocks.html")
-
-if __name__ == "__main__":
-    app.run(debug=True)
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
