@@ -219,6 +219,10 @@ body::after {
     color:black;
     opacity: 0.8;
 }
+#title{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 @media only screen and (max-width: 1475px) {
     body{
         background-position:center;
@@ -227,5 +231,8 @@ body::after {
 @media only screen and (max-width: 700px) {
     #over{
         left:8%;
+    }
+    .popup{
+        right:-170px;
     }
 }
