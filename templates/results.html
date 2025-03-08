@@ -129,6 +129,9 @@
     </article>
     <br>
     <a href="{{ url_for('main_page') }}">Back to Home<i class="fa fa-home"></i></a>
+    <footer>
+        <p>&copy; <span id="current-year"></span> Auron. All rights reserved. | Health Activated</p>
+    </footer>
     </div>
     <script>
         function openPopup() {
@@ -140,6 +143,7 @@
         function toggleMenu() {
             document.getElementById("menu-list").classList.toggle("active");
         }
+        document.getElementById('current-year').textContent = new Date().getFullYear();
         console.log("%c © 2025 Shaik Zuheruddin. All Rights Reserved.", "color: #20dbca; font-size: 16px;");
     </script>
     <p style="font-size: 8px; color: rgba(255, 255, 255, 0.1); position: absolute; bottom: 5px; right: 10px;">
