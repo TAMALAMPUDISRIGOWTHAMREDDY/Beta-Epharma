@@ -14,26 +14,34 @@
 </head>
 
 <body>
-    <nav class="navigate">
-        <ul>
-            <a href="{{ url_for('main_page') }}"><li>Home</li></a>
-            <li class="dropdown">
-                <a href="#" class="dropbtn">Emergency</a>
-                <div class="dropdown-content">
-                    <a href="{{ url_for('guide1') }}">CPR</a>
-                    <a href="{{ url_for('guide2') }}">Snake Bite</a>
-                    <a href="{{ url_for('guide3') }}">Fire Accident</a>
-                    <a href="{{ url_for('guide4') }}">Electric Shock</a>
-                </div>
-            </li>
-            {% if session.get('user') %}
-                <a href="{{ url_for('logout') }}" class="logout-btn"><li>Logout</li></a>
-            {% else %}
-                <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
-            {% endif %}
-            <a href="#" onclick="openPopup()"><li>About Us</li></a>
-        </ul>
-    </nav>
+    <header class="hd">
+        <figure class="logo">
+            <img src="../static/Faviicon/trace.svg">
+        </figure>
+        <nav class="navigate">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="nav-menu">
+                <ul id="menu-list">
+                    <a href="{{ url_for('main_page') }}"><li>Home</li></a>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Emergency</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('guide1') }}">CPR</a>
+                            <a href="{{ url_for('guide2') }}">Snake Bite</a>
+                            <a href="{{ url_for('guide3') }}">Fire Accident</a>
+                            <a href="{{ url_for('guide4') }}">Electric Shock</a>
+                        </div>
+                    </li>
+                    {% if session.get('user') %}
+                        <a href="{{ url_for('logout') }}" class="logout-btn"><li>Logout</li></a>
+                    {% else %}
+                        <a href="{{ url_for('signup_page') }}"><li>Login</li></a>
+                    {% endif %}
+                    <a href="#" onclick="openPopup()"><li>About Us</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div id="about-us-popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closePopup()">&times;</span>
@@ -125,6 +133,9 @@
         }
         function closePopup() {
             document.getElementById("about-us-popup").style.display = "none";
+        }
+        function toggleMenu() {
+            document.getElementById("menu-list").classList.toggle("active");
         }
         console.log("%c © 2025 Shaik Zuheruddin. All Rights Reserved.", "color: #20dbca; font-size: 16px;");
         
