@@ -494,13 +494,23 @@ body::after {
         width:100%;
         margin:0px;
     }
+    #menu-list a:hover{
+        background-color: #1b8890;
+    }
+    #menu-list li{
+        border:0px;
+    }
     .dropdown{
         width:100%;
         background:#2fa2a8;
         margin: 0%;
     }
+    .dropdown:hover{
+        background-color: #1b8890;
+    }
     .dropbtn{
         border:0px !important;
+        padding:15px !important ;
     }
     .logout-btn{
         background-color: #f44336!important;
