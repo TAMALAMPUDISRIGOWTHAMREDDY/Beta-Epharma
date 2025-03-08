@@ -74,7 +74,6 @@ button:hover {
 /* Navigation Bar */
 .hd{
     background: #2fa2a8;
-    border: 1px solid #247d84;
     margin: -7px -10px 0px -11px;
     border-radius: 1px;
     height: 90px;
@@ -518,7 +517,15 @@ body::after {
     .logout-btn:hover {
         background-color: #d32f2f !important; /* Darker red on hover */
     }
-    
+    .dropdown-content a{
+        background: white !important;
+        border:0px !important;
+        color:black !important;
+    }
+    .dropdown-content a:hover{
+        background-color:#2fa2a8 !important;
+        color:white !important;
+    }
     #menu-list.active {
         display: flex;
     }
@@ -545,5 +552,6 @@ body::after {
     }
     .popup{
         right:-170px;
+        z-index:2;
     }
 }
