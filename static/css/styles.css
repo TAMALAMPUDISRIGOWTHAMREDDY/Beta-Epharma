@@ -450,6 +450,30 @@ body::after {
     border-radius: 8px;
     color: #666;
 }
+/* Footer Styles */
+footer {
+    background-color: #2fa2a8;
+    color: white; /* White text for contrast */
+    padding: 20px 0; /* Vertical padding for some spacing */
+    text-align: center; /* Center the text */
+    font-family: Arial, sans-serif; /* A clean, professional font */
+    font-size: 14px; /* Adjust the font size for readability */
+    width:100%;
+    margin-left: 0px;
+}
+
+/* Optional: Adding a subtle border-top */
+footer p {
+    margin: 0;
+    padding-top: 5px;
+}
+
+/* Hover effect on the footer text */
+footer p:hover {
+    color: black;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1475px) {
     .emergency {
         height: 550px;
