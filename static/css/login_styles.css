@@ -266,9 +266,9 @@ figcaption{
     margin:auto;
 }
 #title img{
+    mix-blend-mode:multiply;
     width:150px;
     height:150px;
-    object-fit:fill;
 }
 @media only screen and (max-width: 1475px) {
     body{
