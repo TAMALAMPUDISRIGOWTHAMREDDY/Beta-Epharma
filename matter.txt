@@ -1,3 +1,4 @@
+Lot
 pip install scikit-learn
 1. Check Python Version in Terminal
 Run:
