@@ -1,10 +1,8 @@
 /* Property of Shaik Zuheruddin © 2025. Unauthorized use is prohibited. */
-
 html{
     min-height:100%;
     position:relative;
 }
-
 body { 
     font-family: Arial, sans-serif;
     background: url("../images/login.jpg");
@@ -20,6 +18,7 @@ html, body {
 }
 .hd{
     background-color: white;
+    margin: -7px -10px 0px -11px;
     height:100px;
     margin-top: -16px;
     display: flex;
@@ -44,9 +43,8 @@ html, body {
 }
 .nav-menu{
     display: flex;
-    padding-right: 10px;
 }
-.navigate ul{
+#menu-list{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +87,6 @@ html, body {
     right:-4px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-
 }
 
 .dropdown-content a {
@@ -276,9 +273,6 @@ figcaption{
     }
 }
 @media only screen and (max-width: 700px) {
-    .nav-menu ul{
-        background-color: green;
-    }
     .popup{
         right:-170px;
     }
@@ -291,38 +285,64 @@ figcaption{
     .hamburger {
         display: block;
     }
-    .nav-menu ul {
+    #menu-list {
         display: none;
         flex-direction: column;
-        background: white;
+        justify-content: center  !important;
+        align-items: center !important;
+        background:white;
         position: absolute;
         top: 60px;
         right: 0px;
         width: 100%;
         text-align: center;
         z-index:1;
-        border:1px solid black;
+        border:2px solid black;
+        height:243px;
         gap:0px;
+        margin-right:-1px;
+        padding:0px;
+    }
+    #menu-list li{
+        padding: 22px !important;;
     }
     #menu-list a{
         border-bottom:1px solid black;
+        padding: 0px;
         width:100%;
     }
     #menu-list a:hover{
-        border-bottom:0px;
         background-color: #20dbca ;
     }
     .dropdown{
         width:100%;
+        border-bottom:1px solid black;
+        height:10px;
     }
-    .nav-menu ul.active {
-        display: flex;
+    .dropbtn{
+        border:0px !important;
+        margin-top:-20px !important;
+        padding:15px !important ;
     }
     .dropdown-content {
         position: relative;
         width: 100%;
+        height: 150px !important;;
         text-align: center;
+        border: 1px solid black;
     }
+    .dropdown-content a{
+        border:0px !important;
+        color:black !important;
+        padding: 10px !important;
+    }
+    .dropdown-content a:hover{
+        border-bottom:1px solid black !important;
+    }
+    #menu-list.active {
+        display: flex;
+    }
+    
     .login-container {
         max-width: 90%;
     }
