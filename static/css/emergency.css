@@ -164,10 +164,6 @@ body {
     color: black;
     font-size: 18px;
 }
-.fade-out {
-    color:black;
-    opacity: 0.8;
-}
 body::after {
     content: "© 2025 Shaik Zuheruddin";
     position: fixed;
