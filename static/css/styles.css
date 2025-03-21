@@ -292,6 +292,8 @@ button:hover {
 #disclaimer {
     color: rgba(255, 0, 0, 1.2);
     font-size: 20px;
+    animation: blink 1s infinite;
+    animation-timing-function: ease;
 }
 
 a {
@@ -406,10 +408,6 @@ body::after {
     color: black;
     font-size: 18px;
 }
-.fade-out {
-    color:black;
-    opacity: 0.8;
-}
 .internet-status {
     background-color: #ffebee;
     border-left: 4px solid #f44336;
@@ -473,7 +471,17 @@ footer p:hover {
     color: black;
     cursor: pointer;
 }
-
+@keyframes blink{
+    0%{
+        opacity: 1.8;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        opacity: 1.8;
+    }
+}
 @media only screen and (max-width: 1475px) {
     .emergency {
         height: 550px;
