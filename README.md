@@ -24,11 +24,11 @@ Auron-Health is designed to improve healthcare accessibility and offer timely, r
 https://github.com/user-attachments/assets/79ad04a3-79ba-4d07-9c9d-f7d324fbeb75
 
 ## Features
- ...The platform provides personalized medicine recommendations based on user-reported symptoms.
- ...The system also features a Reverse Medication tool, which suggests symptoms that can be treated by a particular medicine.
- ...An Emergency Guide to assist during critical situations.
- ...Users can visit an official online store to purchase medicines directly.
- ...Users can either Login or Use for free
+ - The platform provides personalized medicine recommendations based on user-reported symptoms.
+ - The system also features a Reverse Medication tool, which suggests symptoms that can be treated by a particular medicine.
+ - An Emergency Guide to assist during critical situations.
+ - Users can visit an official online store to purchase medicines directly.
+ - Users can either Login or Use for free
 
 ## Docs & Community
 ## Quick Start
