@@ -31,9 +31,28 @@ https://github.com/user-attachments/assets/79ad04a3-79ba-4d07-9c9d-f7d324fbeb75
  - Users can either Login or Use for free
 
 ## Docs & Community
+For Understanding and Trouble Shooting.<br>Refer
+[Docs](https://github.com/Shaik-Zuher/Auron/blob/main/matter.txt)
 ## Quick Start
+ - Download the zip file
+ - Follow Documentation Guide
+   or
+ - Clone/fork the repository and get started with Guide
 ## Philosophy Future
+This Project was created just for learing.<br>
+If in the future if this project gets pitched or popular then we will consider adding following:<br>
+ - **Mobile Application Development :** A mobile version of application
+ - **Mutlilingual Support           :** Support for various languages
+ - **Real Time Emergency Guide      :** Emergency Guide updated on current emergency situations
+ - **Doctor Consultation            :** Adding Doctor Consultation for users.
 ## Contributing
+
+Auron welcomes all constructive contributions. Contributions take many forms,
+from code for bug fixes and enhancements, to additions and fixes to documentation, additional
+tests, triaging incoming pull requests and issues, and more!
+
+See the [Contributing Guide](https://github.com/Shaik-Zuher/Auron/blob/main/Contributing.md) for more technical details on contributing.
+
 ## TC (Technical Committee)
 
 * [T Gowtham Reddy](https://github.com/TAMALAMPUDISRIGOWTHAMREDDY) - **Gowtham Reddy**
