@@ -9,25 +9,51 @@ body {
     background-size: cover;
     background-position:right;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+.hd{
+    background: #2fa2a8;
+    border: 1px solid black;
+    margin: -7px -10px 0px -11px;
+    border-radius: 1px;
+    height: 90px;
+    margin-top: -16px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    height:74px;
+    width:120px;
+}
+.logo img{
+    object-fit: cover;
+    width:100px;
+    height:64px;
 }
 .navigate {
-    background: #2fa2a8;
-    height: 90px;
-    margin: -7px -10px 0px -11px;
     display: flex;
-    justify-content: right;
-    border: 1px solid #247d84;
-    border-radius: 1px;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
 }
-
-.navigate ul {
+.nav-menu{
+    display: flex;
+}
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: black;
+}
+#menu-list {
     display: flex;
     justify-content: right;
+    align-items: center;
     width: 500px;
-    height: 84px;
-    box-sizing: border-box;
+    height: 90px;
+    margin-top:17px;
 }
-
 .navigate a {
     margin: auto;
     list-style: none;
@@ -138,10 +164,6 @@ body {
     color: black;
     font-size: 18px;
 }
-.fade-out {
-    color:black;
-    opacity: 0.8;
-}
 body::after {
     content: "© 2025 Shaik Zuheruddin";
     position: fixed;
@@ -210,6 +232,31 @@ a{
     display: flex;
     justify-content: center;
 }
+/* Footer Styles */
+footer {
+    background-color: #2fa2a8;
+    color: white; /* White text for contrast */
+    padding: 20px 0; /* Vertical padding for some spacing */
+    text-align: center; /* Center the text */
+    font-family: Arial, sans-serif; /* A clean, professional font */
+    font-size: 14px; /* Adjust the font size for readability */
+    width:100%;
+    margin-left:-7px;
+    margin-bottom:-10px;
+}
+
+/* Optional: Adding a subtle border-top */
+footer p {
+    margin: 0;
+    padding-top: 5px;
+}
+
+/* Hover effect on the footer text */
+footer p:hover {
+    color: black;
+    cursor: pointer;
+}
+
 @media only screen and (max-width:1475px){
     video{
         height:300px;
@@ -221,6 +268,67 @@ a{
     }
 }
 @media only screen and (max-width:700px){
+    .hamburger{
+        display: block;
+        color:white;
+    }
+    #menu-list {
+        background-color: #247d84;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        border: 1px solid #247d84;
+        top: 67px;
+        right: 0px;
+        width: 100%;
+        height:235px;
+        text-align: center;
+        z-index:1;
+        margin-right:-1px;
+        padding: 0px;
+    }
+    #menu-list a{
+        background:#2fa2a8;
+        border:2px solid #247d84;
+        width:100% !important;
+        margin: 0px !important;;
+    }
+    #menu-list a:hover{
+        background-color: #1b8890;
+    }
+    #menu-list li{
+        border:0px;
+    }
+    .dropdown{
+        width:100%;
+        background:#2fa2a8;
+        margin: 0%;
+    }
+    .dropdown:hover{
+        background-color: #1b8890;
+    }
+    .dropbtn{
+        border:0px !important;
+        padding:15px !important ;
+    }
+    .logout-btn{
+        background-color: #f44336!important;
+    }
+    .logout-btn:hover {
+        background-color: #d32f2f !important; /* Darker red on hover */
+    }
+    .dropdown-content a{
+        background: white !important;
+        border:0px !important;
+        color:black !important;
+    }
+    .dropdown-content a:hover{
+        background-color:#2fa2a8 !important;
+        color:white !important;
+    }
+    #menu-list.active {
+        display: flex;
+    }
     .matter{
         margin:10px;
     }
@@ -237,5 +345,6 @@ a{
     }
     .popup{
         right:-170px;
+        z-index:2;
     }
 }
