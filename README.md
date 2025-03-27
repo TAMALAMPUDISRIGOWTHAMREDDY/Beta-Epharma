@@ -21,7 +21,7 @@ The system also features a Reverse Medication tool, which suggests symptoms that
 Auron-Health is designed to improve healthcare accessibility and offer timely, reliable solutions using cutting-edge technology.
 <br>
 <br>
-https://github.com/user-attachments/assets/79ad04a3-79ba-4d07-9c9d-f7d324fbeb75
+<video src="https://github.com/user-attachments/assets/79ad04a3-79ba-4d07-9c9d-f7d324fbeb75">
 
 ## Features
  - The platform provides personalized medicine recommendations based on user-reported symptoms.
